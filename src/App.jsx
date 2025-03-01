@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import './App.css';
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { useAppKit } from '@reown/appkit/react'
-
+// adeded reown app kiit
 
 
 function App() {
