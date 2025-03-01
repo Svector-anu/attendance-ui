@@ -1,0 +1,204 @@
+/* src/App.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #c6ab85;
+  --background-color: #f8f9fa;
+  --card-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.connect-wallet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.connect-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.connect-btn:hover {
+  background-color: #90b929;
+}
+
+.wallet-info {
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.helper-text {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.week-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.week-selector select {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  cursor: pointer;
+}
+
+.attendance-table, .attendance-summary {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.attendance-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+  transition: all 0.3s;
+}
+
+.attendance-btn.present {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.attendance-btn.absent {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.attendance-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.attendance-summary table {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .week-selector {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .App {
+    padding: 1rem;
+  }
+  
+  th, td {
+    padding: 0.5rem;
+  }
+  
+  .attendance-btn {
+    width: 80px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .disconnect-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .disconnect-btn:hover {
+    background-color: #c0392b;
+  }
+}
